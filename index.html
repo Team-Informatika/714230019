@@ -3,79 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <title>Hadi Muhammad Yusuf - Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="icon" type="image/x-icon" href="image.png" />
+  <link rel="icon" href="image.png" />
+  <style>
+    .nav-active::after {
+      width: 100% !important;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
   <!-- Navbar -->
   <nav class="bg-gray-800 shadow-md">
-  <div class="container mx-auto flex justify-between items-center p-5">
-    <h1 class="text-2xl font-extrabold tracking-wide text-green-400">PORTOFOLIO</h1>
-    <div class="hidden md:flex space-x-6 text-sm font-medium">
-      <a href="index.html" class="relative group hover:text-green-400 transition nav-link">
-        Home
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="about.html" class="relative group hover:text-green-400 transition nav-link">
-        About
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="projects.html" class="relative group hover:text-green-400 transition nav-link">
-        Projects
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="contact.html" class="relative group hover:text-green-400 transition nav-link">
-        Contact
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="download.html" class="relative group hover:text-green-400 transition nav-link">
-        Download CV
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
+    <div class="container mx-auto flex justify-between items-center p-5">
+      <h1 class="text-2xl font-extrabold tracking-wide text-green-400">PORTOFOLIO</h1>
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="index.html" class="relative group text-green-400 nav-link">
+          Home
+          <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-400 nav-active"></span>
+        </a>
+        <a href="about.html" class="relative group hover:text-green-400 transition nav-link">
+          About
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="projects.html" class="relative group hover:text-green-400 transition nav-link">
+          Projects
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="contact.html" class="relative group hover:text-green-400 transition nav-link">
+          Contact
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="download.html" class="relative group hover:text-green-400 transition nav-link">
+          Download CV
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </div>
     </div>
-  </div>
-</nav>
-
+  </nav>
 
   <!-- Hero Section -->
-  <section class="text-center py-20 px-5">
-    <div class="container mx-auto max-w-3xl">
-      <h2 class="text-5xl font-extrabold mb-3">Hi, I'm <span class="text-green-400">Hadi Muhammad Yusuf</span></h2>
-      <h3 class="text-2xl font-semibold text-green-300 mb-4">Creative Player</h3>
-      <p class="text-gray-300 text-lg leading-relaxed">
-        I'm a passionate UI/UX designer with a mission to create delightful and intuitive digital experiences.
-      </p>
+  <section class="text-center py-20 px-5 fade-in" id="hero">
+    <h2 class="text-4xl font-bold">HI, I'M <span class="text-green-400">HADI MUHAMMAD YUSUF!</span></h2>
+    <h3 class="text-3xl font-semibold text-green-300 mt-2">CREATIVE PLAYER</h3>
+    <p class="max-w-2xl mx-auto mt-4 text-gray-300 text-lg">
+      Saya adalah seorang UI/UX Designer dan Web Developer yang fokus menciptakan pengalaman digital yang intuitif dan menyenangkan.
+    </p>
 
-      <!-- Action Buttons -->
-      <div class="mt-8 flex justify-center flex-wrap gap-4">
-        <button class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg shadow transition duration-300">
-          <a href="download.html">Download CV</a>
-        </button>
-        <button class="border border-green-400 text-green-400 px-5 py-2 rounded-lg hover:bg-green-600 hover:text-white transition duration-300">
-          Watch The Video
-        </button>
-      </div>
+    <div class="mt-6 flex justify-center flex-wrap gap-4">
+      <a href="download.html" class="bg-green-500 hover:bg-green-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
+        Download CV
+      </a>
+      <a href="https://youtu.be/" target="_blank" class="border border-green-400 text-green-400 px-6 py-3 rounded-lg shadow-md hover:bg-green-600 hover:text-white transition">
+        Watch The Video
+      </a>
+    </div>
 
-      <!-- Pricing Toggle -->
-      <div class="mt-8">
-        <button onclick="togglePricing()" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-lg shadow transition duration-300">
-          Show Pricing
-        </button>
-      </div>
+    <div class="mt-6">
+      <button onclick="togglePricing()" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
+        Show Pricing
+      </button>
+    </div>
 
-      <!-- Pricing Card -->
-      <div id="pricingCard" class="hidden mt-6 flex justify-center">
-        <div class="w-72 p-6 bg-gray-800 border border-green-500 rounded-xl shadow-lg">
-          <h4 class="text-xl font-bold mb-2">Service Pricing</h4>
-          <p class="text-lg text-green-400">Rp50.000 per jam</p>
-        </div>
+    <div id="pricingCard" class="hidden mt-6 flex justify-center">
+      <div class="w-64 p-4 bg-gray-800 border border-green-400 text-center rounded-lg shadow-md">
+        <h3 class="text-xl font-bold">Service Pricing</h3>
+        <p class="text-lg text-green-400">Rp50.000 per jam</p>
       </div>
     </div>
   </section>
 
   <script>
+    // Hero section fade-in on load
+    window.addEventListener("load", () => {
+      document.getElementById("hero").classList.add("show");
+    });
+
+    // Toggle pricing card
     function togglePricing() {
       const card = document.getElementById("pricingCard");
       card.classList.toggle("hidden");
