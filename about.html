@@ -6,63 +6,76 @@
   <title>About Me - Hadi Muhammad Yusuf</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="image.png" />
+  <style>
+    .nav-active::after {
+      width: 100% !important;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .fade-in.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
 <body class="bg-gray-900 text-white font-sans">
 
   <!-- Navbar -->
- <nav class="bg-gray-800 shadow-md">
-  <div class="container mx-auto flex justify-between items-center p-5">
-    <h1 class="text-2xl font-extrabold tracking-wide text-green-400">PORTOFOLIO</h1>
-    <div class="hidden md:flex space-x-6 text-sm font-medium">
-      <a href="index.html" class="relative group hover:text-green-400 transition nav-link">
-        Home
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="about.html" class="relative group hover:text-green-400 transition nav-link">
-        About
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="projects.html" class="relative group hover:text-green-400 transition nav-link">
-        Projects
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="contact.html" class="relative group hover:text-green-400 transition nav-link">
-        Contact
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="download.html" class="relative group hover:text-green-400 transition nav-link">
-        Download CV
-        <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
-      </a>
+  <nav class="bg-gray-800 shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-5">
+      <h1 class="text-2xl font-extrabold tracking-wide text-green-400">PORTOFOLIO</h1>
+      <div class="hidden md:flex space-x-6 text-sm font-medium">
+        <a href="index.html" class="relative group hover:text-green-400 transition nav-link">
+          Home
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="about.html" class="relative group text-green-400 nav-link">
+          About
+          <span class="absolute left-0 -bottom-1 w-full h-0.5 bg-green-400 nav-active"></span>
+        </a>
+        <a href="projects.html" class="relative group hover:text-green-400 transition nav-link">
+          Projects
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="contact.html" class="relative group hover:text-green-400 transition nav-link">
+          Contact
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="download.html" class="relative group hover:text-green-400 transition nav-link">
+          Download CV
+          <span class="absolute left-0 -bottom-1 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+      </div>
     </div>
-  </div>
-</nav>
-
+  </nav>
 
   <!-- About Section -->
-  <section class="min-h-screen flex items-center justify-center px-6 py-20">
+  <section class="min-h-screen flex items-center justify-center px-6 py-20 fade-in" id="aboutSec">
     <div class="max-w-4xl mx-auto text-center">
       <h1 class="text-5xl font-extrabold text-green-400">About Me</h1>
       <p class="mt-4 text-lg text-gray-300 leading-relaxed">
-        Halo! Saya <span class="font-semibold text-white">Hadi Muhammad Yusuf</span>, seorang <span class="text-green-300 font-medium">UI/UX Designer</span> dan <span class="text-green-300 font-medium">Web Developer</span>. Saya fokus menciptakan pengalaman pengguna yang fungsional, menarik, dan intuitif.
+        Halo! Saya <span class="font-semibold text-white">Hadi Muhammad Yusuf</span>, seorang <span class="text-green-300 font-medium">UI/UX Designer</span> dan <span class="text-green-300 font-medium">Web Developer</span>. Saya senang membangun antarmuka pengguna yang intuitif, estetis, dan berfokus pada pengalaman manusia.
       </p>
       <p class="mt-4 text-gray-400">
-        Saya percaya bahwa desain yang baik adalah yang menyampaikan pesan dengan jelas, mudah digunakan, dan menyenangkan secara visual.
+        Saya percaya bahwa teknologi seharusnya membantu, bukan membingungkan. Dalam setiap proyek, saya berusaha menyampaikan identitas melalui desain yang bermakna dan kinerja yang optimal.
       </p>
 
-      <!-- Skills -->
+      <!-- Skills Section -->
       <div class="mt-10 grid md:grid-cols-3 gap-6 text-left">
         <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-green-500">
           <h3 class="text-xl font-bold text-green-400 mb-2">UI/UX Design</h3>
-          <p class="text-gray-300">Mendesain antarmuka yang modern dan mudah digunakan berdasarkan prinsip desain human-centered.</p>
+          <p class="text-gray-300">Menggunakan prinsip human-centered design untuk menciptakan pengalaman pengguna yang menyenangkan dan fungsional.</p>
         </div>
         <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-green-500">
           <h3 class="text-xl font-bold text-green-400 mb-2">Frontend Development</h3>
-          <p class="text-gray-300">Mengembangkan website interaktif dan responsif menggunakan HTML, CSS, JavaScript, dan Tailwind CSS.</p>
+          <p class="text-gray-300">Mengembangkan antarmuka modern dan responsif menggunakan HTML, CSS, JavaScript, dan Tailwind CSS.</p>
         </div>
         <div class="bg-gray-800 p-6 rounded-xl shadow-lg border border-green-500">
           <h3 class="text-xl font-bold text-green-400 mb-2">Creative Thinking</h3>
-          <p class="text-gray-300">Berpikir kreatif untuk solusi digital yang efisien, inovatif, dan relevan dengan kebutuhan pengguna.</p>
+          <p class="text-gray-300">Selalu berusaha mencari solusi visual dan teknis terbaik dalam menyampaikan pesan digital.</p>
         </div>
       </div>
 
@@ -75,5 +88,12 @@
     </div>
   </section>
 
+  <script>
+    window.addEventListener("load", () => {
+      document.getElementById("aboutSec").classList.add("show");
+    });
+  </script>
+
 </body>
 </html>
+  
